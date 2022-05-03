@@ -9,4 +9,6 @@ This is my personal repo with code and notes from the Go Academy. Content mainly
     - Range
 - Slices
 - Structs
+    - Fields
+    - Embedded structs
 - Types
