@@ -8,6 +8,11 @@ type person struct {
 	favouriteFlavours []string
 }
 
+type secretAgent struct {
+	person
+	licenceToKill bool
+}
+
 func PersonStruct() {
 	personOne := person{
 		firstName:         "Jordan",
@@ -37,4 +42,15 @@ func PersonStruct() {
 		fmt.Println(v)
 	}
 
+	doubleOAgent := secretAgent{
+		person: person{
+			firstName:         "James",
+			lastName:          "Bond",
+			favouriteFlavours: []string{"Gin", "Vesper"},
+		},
+		licenceToKill: true,
+	}
+	fmt.Println("\nPrint Embedded Struct (secretAgent person):")
+	fmt.Println(doubleOAgent)
+	fmt.Println(doubleOAgent.firstName, doubleOAgent.lastName, doubleOAgent.licenceToKill)
 }
