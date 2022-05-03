@@ -11,4 +11,5 @@ This is my personal repo with code and notes from the Go Academy. Content mainly
 - Structs
     - Fields
     - Embedded structs
+    - Anonymous structs
 - Types
