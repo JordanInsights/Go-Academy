@@ -20,4 +20,7 @@ func main() {
 
 	fmt.Println("\nInitialise two VALUES of TYPE person, print the values")
 	PersonStruct()
+
+	fmt.Println("\nPrint the anonymous struct")
+	AnonymousStruct()
 }
