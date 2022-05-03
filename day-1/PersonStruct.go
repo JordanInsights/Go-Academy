@@ -3,9 +3,8 @@ package main
 import "fmt"
 
 type person struct {
-	firstName         string
-	lastName          string
-	favouriteFlavours []string
+	firstName, lastName string
+	favouriteFlavours   []string
 }
 
 type secretAgent struct {
