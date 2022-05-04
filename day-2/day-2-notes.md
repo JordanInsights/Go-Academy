@@ -76,6 +76,68 @@ If no arguments are passed for the variadic parameter, the value of the paramete
     // OUTPUT
     // Total is equal to:  6
 
+## Defer
+A defer statement invokes a function whose execution is deferred to the moment the surrouding function returns, either because the surrounding function executed a return statement, reached the end of its function body, or because the corresponsing goroutine is panicking. 
+
+```DeferStmt = "defer" Expression .```
+
+    package main
+    
+    import (
+        "fmt
+    )
+
+    func main() {
+        defer foo()
+        bar()
+    }
+
+    func foo() {
+        fmt.Println("foo)
+    }
+
+    func bar() {
+        fmt.Println("bar)
+    }
+
+    // OUTPUT
+    // bar
+    // foo
+
+## Methods
+    package main
+
+    import (
+        "fmt
+    )
+
+    type person struct {
+        first string
+        last string
+    }
+
+    type secretAgent struct {
+        person
+        ltk bool
+    }
+
+    // any VALUE of TYPE secretAgent has access to the speak method
+    func (s secretAgent) speak() {
+        fmt.Println("I am", s.first, s.last)
+    }
+
+    func main() {
+        sa1 := secretAgent{
+            person: person{
+                "James",
+                "Bond",
+            },
+            ltk: true,
+        }
+
+        fmt.Println(sa1)
+        sa1.speak()
+    }
 
 
 
