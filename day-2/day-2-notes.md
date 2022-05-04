@@ -201,7 +201,44 @@ Interfaces allow you to define behaviour. They also allow you to implement polym
 
     }
 
-A VALUE CAN BE OF MORE THAN ONE TYPE. Both value of type secret agent and or person ARE ALSO OF TYPE human due to the fact that they both have 'speak()' methods. 
+**A VALUE CAN BE OF MORE THAN ONE TYPE.** Both value of type secret agent and or person ARE ALSO OF TYPE human due to the fact that they both have 'speak()' methods. 
+
+## Anonymous functions
+
+    package main
+    
+    import (
+        "fmt"
+    )
+
+    main() {
+        func() {
+            fmt.Println("This anonymous function is called by the suffixed parentheses)
+        }()
+
+        func(x int) {
+            fmt.Println("This anonymous function is called with the meaning of life: ", x)
+        }(42)
+    }
+
+
+## Func Expression
+An expreesion is something that resolves to a value. The value here is a function we will assign to a variable
+
+    package main
+    
+    import (
+        "fmt"
+    )
+
+    f := func() {
+        fmt.Println("my first func expression")
+    }
+
+    f()
+
+    // OUTPUT
+    // my first func expression
 
 ## Glossary 
 - Lexical Element: Catch all term for elements in Go. For example, comments, operators, tokens, identifiers etc. 
