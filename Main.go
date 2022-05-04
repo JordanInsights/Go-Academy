@@ -1,13 +1,13 @@
 package main
 
 import (
-	"fmt"
 	// day1 "go-academy/day-1"
+	day2 "go-academy/day-2"
 )
 
 func main() {
 	// fmt.Println("Run the Day 1 code")
 	// day1.Main()
 
-	fmt.Println("Run the Day 2 code")
+	day2.Day2()
 }
