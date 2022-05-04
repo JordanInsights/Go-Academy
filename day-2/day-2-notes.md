@@ -240,6 +240,43 @@ An expreesion is something that resolves to a value. The value here is a functio
     // OUTPUT
     // my first func expression
 
+## Returning a function
+    
+    package main
+
+    import (
+        "fmt
+    )
+
+    func main() {
+        // foo() returns a string
+        s1 := foo()
+        fmt.Println(s1)
+
+        // bar() returns a function
+        s2 := bar()
+        fmt.Printf("%T", s2)
+        // OUTPUT
+        // func() int
+
+        x := s2()
+        fmt.Println("\n", x)
+        // OUTPUT 
+        // 1984
+    }
+
+    func foo() string {
+        s := "Hello world!"
+        return s
+    }
+
+    func bar() func() int {
+        return func() int {
+            return 1984
+        }
+    }
+
+
 ## Glossary 
 - Lexical Element: Catch all term for elements in Go. For example, comments, operators, tokens, identifiers etc. 
 - Variadic: Passing in zero or more values
