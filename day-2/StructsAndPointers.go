@@ -19,6 +19,7 @@ func structsAndPointers() {
 	}
 
 	fmt.Println(p1)
+
 	changeMe(&p1)
 	fmt.Println(p1)
 }
