@@ -139,7 +139,69 @@ A defer statement invokes a function whose execution is deferred to the moment t
         sa1.speak()
     }
 
+## Interfaces
+Interfaces allow you to define behaviour. They also allow you to implement polymorphism
 
+    package main
+
+    import (
+        "fmt
+    )
+
+    type person struct {
+        first string
+        last string
+    }
+
+    type secretAgent struct {
+        person
+        ltk bool
+    }
+
+    func (s secretAgent) speak() {
+        fmt.Println("I am", s.first, s.last, " - the secret agent speak")
+    }
+
+    func (p person) speak() {
+        fmt.Println("I am", p.first, p.last, " - the person speak")
+    }
+
+
+    // ANY STRUCT WITH A METHOD of SPEAK IS OF TYPE HUMAN
+    type human interface {
+        speak()
+    }
+
+    func bar (h human) {
+        fmt.Println("I was passed into bar", h)
+    }
+
+    func main() {
+        sa1 := secretAgent{
+            person: person{
+                "James",
+                "Bond",
+            },
+            ltk: true,
+        } 
+        
+        p1 := person{
+            "Jordan",
+            "Shaw",
+        }
+        
+
+        fmt.Println(sa1)
+        sa1.speak()
+        bar(sa1)
+
+        fmt.Println(p1)
+        p1.speak()
+        bar(p1)
+
+    }
+
+A VALUE CAN BE OF MORE THAN ONE TYPE. Both value of type secret agent and or person ARE ALSO OF TYPE human due to the fact that they both have 'speak()' methods. 
 
 ## Glossary 
 - Lexical Element: Catch all term for elements in Go. For example, comments, operators, tokens, identifiers etc. 
