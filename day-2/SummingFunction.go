@@ -3,6 +3,8 @@ package day2
 import "fmt"
 
 func summingFunction() {
+	fmt.Println("\nSumming Exercise:")
+
 	fooSum := foo(1, 2, 3)
 	fmt.Println("Return value of foo: ", fooSum)
 
