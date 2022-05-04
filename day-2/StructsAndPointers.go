@@ -13,6 +13,8 @@ func changeMe(p *person) {
 }
 
 func structsAndPointers() {
+	fmt.Println("\033[33m", "\nStructs and Pointers Exercise: ", "\033[0m")
+
 	p1 := person{
 		firstName: "Jordan",
 		lastName:  "Shaw",

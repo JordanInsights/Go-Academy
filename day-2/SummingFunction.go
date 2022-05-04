@@ -3,7 +3,7 @@ package day2
 import "fmt"
 
 func summingFunction() {
-	fmt.Println("\nSumming Exercise:")
+	fmt.Println("\033[33m", "\nSumming Exercise:", "\033[0m")
 
 	fooSum := foo(1, 2, 3)
 	fmt.Println("Return value of foo: ", fooSum)

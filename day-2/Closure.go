@@ -3,7 +3,7 @@ package day2
 import "fmt"
 
 func closure() {
-	fmt.Println("\nClosure Exercise:")
+	fmt.Println("\033[33m", "\nClosure Exercise: ", "\033[0m")
 
 	a := doubler(1)
 	b := doubler(1)

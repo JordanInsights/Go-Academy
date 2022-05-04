@@ -12,15 +12,15 @@ func Day1() {
 	fmt.Println("Y (string): ", Y)
 	fmt.Println("Z (bool): ", Z)
 
-	fmt.Println("\nOutput of the FizzBuzz task: ")
+	fmt.Println("\033[33m", "\nFizzBuzz Exercise:", "\033[0m")
 	FizzBuzz()
 
-	fmt.Println("\nOutput of AppendToSlice task: ")
+	fmt.Println("\033[33m", "\nAppendToSlice Exercise:", "\033[0m")
 	AppendToSlice()
 
-	fmt.Println("\nInitialise two VALUES of TYPE person, print the values")
+	fmt.Println("\033[33m", "\nInitialise two VALUES of TYPE person Exercise:", "\033[0m")
 	PersonStruct()
 
-	fmt.Println("\nPrint the anonymous struct")
+	fmt.Println("\033[33m", "\nAnonymous Struct Exercise:", "\033[0m")
 	AnonymousStruct()
 }

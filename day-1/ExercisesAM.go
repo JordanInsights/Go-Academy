@@ -9,6 +9,8 @@ func ShortDeclarationOperator() {
 	y := "James Bond"
 	z := true
 
+	fmt.Println("\033[33m", "\nShort Declaration Operator Exercise:", "\033[0m")
+
 	fmt.Println("Single Print Statement:", x, y, z)
 
 	fmt.Println("\nMultiple Print Statements: ")
