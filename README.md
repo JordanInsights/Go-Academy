@@ -3,7 +3,7 @@ This is my personal repo with code and notes from the Go Academy. Content mainly
 #
 ## Setup
 
-1. In order to use the repo you must have go installed.
+1. In order to use the repo you must have [Go](https://go.dev/doc/install) installed.
 2. At the root of the repo, run: 
 
         go mod init go-academy
