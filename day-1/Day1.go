@@ -4,7 +4,7 @@ import (
 	"fmt"
 )
 
-func Main() {
+func Day1() {
 	ShortDeclarationOperator()
 
 	fmt.Println("\n'Zero Value' variables with package level scope, for integers, strings, and booleans:")
