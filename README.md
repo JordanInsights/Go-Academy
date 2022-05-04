@@ -27,3 +27,5 @@ This is my personal repo with code and notes from the Go Academy. Content mainly
 - Methods
 - Interfaces
 - Closure
+- Pointers
+- Method Sets
