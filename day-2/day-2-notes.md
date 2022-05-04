@@ -276,6 +276,33 @@ An expreesion is something that resolves to a value. The value here is a functio
         }
     }
 
+## Closure
+Closure is a concept where you enclose the scope of a variable and contain it to one area, thereby limiting its scope. In general, you want to keep the scope of a variable as narrow as possible. 
+
+    package main
+
+    import (
+        "fmt"
+    )
+
+    func main() {
+        a := incrementer()
+        b := incrementer()
+
+        fmt.Println("First call of a: ", a()) 
+        fmt.Println("Second call of a: ", a()) 
+        
+        // first return value of b is 1 as calling incrementer returned functions with their own scope
+        fmt.Println("First call of b: ", b()) 
+    }
+
+    func incrementer() func () int {
+        var x int
+        return func() int {
+            x++
+            return x
+        }
+    }
 
 ## Glossary 
 - Lexical Element: Catch all term for elements in Go. For example, comments, operators, tokens, identifiers etc. 
