@@ -1,5 +1,4 @@
 # Pointers
-## Memory
 Values are stored in memory addresses. **To see an address in memory in Go you use the** ```&``` **operator**
 
     package main
