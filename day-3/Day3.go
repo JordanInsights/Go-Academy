@@ -14,4 +14,8 @@ func Day3() {
 	ExerciseThree()
 
 	Select()
+
+	FanInFunc()
+	FanOutFunc()
+	FanOutFuncThrottled()
 }
