@@ -9,4 +9,5 @@ func Day3() {
 	// BrokenDirectionalChannels()
 	DirectionChannels()
 	DirectionChannelsUseCase()
+	RangeClose()
 }
