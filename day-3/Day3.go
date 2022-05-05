@@ -7,15 +7,18 @@ func Day3() {
 	// UnsuccessfulBufferExample()
 
 	// BrokenDirectionalChannels()
-	DirectionChannels()
-	DirectionChannelsUseCase()
-	RangeClose()
+	// DirectionChannels()
+	// DirectionChannelsUseCase()
+	// RangeClose()
 
-	ExerciseThree()
+	// ExerciseThree()
 
-	Select()
+	// Select()
 
-	FanInFunc()
-	FanOutFunc()
-	FanOutFuncThrottled()
+	// FanInFunc()
+	// FanOutFunc()
+	// FanOutFuncThrottled()
+
+	// ExerciseSeven()
+	ActorModel()
 }
