@@ -105,4 +105,68 @@ Example code:
     // OUTPUT (something like...)
     // Chchna s g r
 
+#
+
 ## Bet365 DO NOT ALLOW THE USE OF MUTEXES AS THEY HAVE POOR PERFROMANCE AT HIGH LOAD. 
+
+#
+
+## The Actor Model 
+
+This is the preferred Bet365 solution
+
+- Idiomatic Go solition
+- Goroutines and channels
+
+The actor model encapsulates concurrency management. 
+- Requests are asynchronous
+- Requests placed on a channel
+- Single goroutine reads requests from channel
+- Handles requests one at a time
+
+Many goroutines can add a request to the channel. The Actor guarentees only one will access the protected resource. 
+
+### Goroutines
+- One goroutine can run one function
+- Goroutines execute in parallel
+    - Possibly on different CPU cores
+    - Possibly on CPU threads or fibres
+    - Go Scheduler decides
+- Similar to threads
+    - Lighter weight than threads
+    - 100'000s of goroutines no problem 
+
+To get gorputintes to talk to each other safely, you have to use a ***channel***.
+
+### Channels
+- Channels send data between goroutines. 
+- They are concurrent safe
+- Alternative to mutexes
+
+Example
+- https://play.golang.org/p/EyEEC_fSfjF
+- One goroutine sends data on a channel
+- Four goroutines read data off that channel
+- Concurrent behaviour - utilise CPU efficiently 
+- Order not guaranteed
+
+Code:
+
+    func main() {
+        channel := make(chan string)
+
+        go sendData(channel)
+
+        for i:= 1; i <= 4; i++ {
+
+        }
+    }
+
+
+
+
+
+
+    type operation struct {
+        
+    }
