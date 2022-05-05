@@ -2,7 +2,11 @@ package day3
 
 func Day3() {
 	// BrokenChannelsExample()
-	ChannelsExample()
-	BufferChannelsExample()
+	// ChannelsExample()
+	// BufferChannelsExample()
 	// UnsuccessfulBufferExample()
+
+	// BrokenDirectionalChannels()
+	DirectionChannels()
+	DirectionChannelsUseCase()
 }

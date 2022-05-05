@@ -6,3 +6,6 @@ Channels BLOCK. They are like runners in a relay race.
     - One runner can't apss the baton at one moment and then later have the other runner receive the baton
     - the baton is passed/receieved by the runners AT THE SAME TIME
 - The value is passed/received synchronously; at the same time. 
+
+## Directional Channels
+You can specify a direction for a channel. 
