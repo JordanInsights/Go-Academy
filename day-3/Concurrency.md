@@ -84,3 +84,54 @@ Concurrency is a design pattern, concurrent code can itself run in parallel. Hav
 
     // IN THIS EXAMPLE COUNT DOESNT REACH 100 VAST MAJORITY OF TIME. WHICH IS OBVIOUSLY INCORRECT
     // ILLUSTRATES THE LIMITATIONS OF WAIT
+
+***You can run code to check for race conditions by using the command:*** 
+
+```go run -race main.go```
+
+If there is a data race, you should see something in the output analagous to this: 
+
+```Found n data race(s)```
+
+## Mutex
+Mutex locks a shared variable until the change/mutation is done
+
+    package main
+
+    import (
+        "fmt"
+        "runtime"
+        "sync"
+    )
+
+    func main() {
+        fmt.Println("CPUs: ", runtime.NumCPU())
+        fmt.Println("Goroutines: ", runtime.NumGoroutine())
+
+        counter := 0
+        const gs = 100
+        
+        var wg sync.WaitGroup
+        wg.Add(gs)
+
+        var mu sync.Mutex
+
+
+        for i := 0; i < gs; i++ {
+            go func() {
+                mu.Lock()
+                v := counter
+                runtime.Gosched()
+                v++
+                counter = v
+                mu.Unlock()
+                wg.Done()
+            }()
+        }
+
+        wg.Wait()
+        fmt.Println("Goroutines: ", runtime.NumGoroutine())
+        fmt.Println("count: ", counter)
+    }
+
+    // COUNT REACHES 100 AND A RACE CONDITION WILL NOT BE DECLARED
