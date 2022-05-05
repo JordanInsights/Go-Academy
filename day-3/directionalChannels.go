@@ -17,7 +17,7 @@ func BrokenDirectionalChannels() {
 // Channel types read from left to right
 
 func DirectionChannels() {
-	fmt.Println("\nDirectional Channels Exemplar code: ")
+	fmt.Println("\033[33m", "\nDirectional Channels Exemplar code: ", "\033[0m")
 
 	c := make(chan int)    // bi-directional
 	cr := make(<-chan int) // receive

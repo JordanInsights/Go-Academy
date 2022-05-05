@@ -10,4 +10,6 @@ func Day3() {
 	DirectionChannels()
 	DirectionChannelsUseCase()
 	RangeClose()
+
+	ExerciseThree()
 }
