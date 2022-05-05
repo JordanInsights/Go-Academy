@@ -12,4 +12,6 @@ func Day3() {
 	RangeClose()
 
 	ExerciseThree()
+
+	Select()
 }
